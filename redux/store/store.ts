@@ -1,6 +1,5 @@
 import { createStore, combineReducers } from 'redux';
-import placeReducer from '../reducers/placeReducer';
-
+import taskReducer from '../reducers/taskReducer';
 // const storeReducer = combineReducers({
 //     places: placeReducer
 // });
@@ -9,6 +8,6 @@ import placeReducer from '../reducers/placeReducer';
 //     return createStore(storeReducer);
 // }
 
-const Store = createStore(placeReducer);
+const Store = createStore(taskReducer);
 
 export default Store;
