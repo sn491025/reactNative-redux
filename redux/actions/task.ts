@@ -1,16 +1,17 @@
-import { ADD_PLACE } from "./type";
+import { ADD_TASK, DELETE_TASK } from "./type";
 
-type props = {
+
+type addTask = {
     taskdescription: any,
     updateAt: any,
-}
+};
 
-export const addPlace = ({taskdescription, updateAt }: props) => {
+export const addTask = ({taskdescription, updateAt }: addTask) => {
 
     var id = 0;
 
     return {
-        type: ADD_PLACE,
+        type: ADD_TASK,
         payload: {
             Task: [{
                 id: ++id,
@@ -19,4 +20,18 @@ export const addPlace = ({taskdescription, updateAt }: props) => {
             }],
         },
     }
+}
+
+type deleteTask = {
+    deleteTask: any;
+};
+
+export const DeleteTask = (deleteTask: any) => {
+    // console.log('djsjdhsjdh',deleteTask);
+        return {
+            type: DELETE_TASK,
+            payload: {
+                Task: deleteTask
+            }
+        }
 }
